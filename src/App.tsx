@@ -1,12 +1,18 @@
 import { ReactElement } from "react";
 import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+const Home = (): ReactElement => {
+  return <h1>Hello there</h1>;
+};
 
 const App = (): ReactElement => {
   return (
-    <div className="App">
-      <h1>Hola</h1>
-      <h1>World</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 };
 
