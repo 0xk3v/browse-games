@@ -1,18 +1,20 @@
 import { ReactElement } from "react";
-import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
-const Home = (): ReactElement => {
-  return <h1>Hello there</h1>;
-};
+import { ThemeProvider } from "styled-components";
+import { Home } from "./components";
+import GlobalStyles from "./styles/GlobalStyles";
+import { theme } from "./styles/theme";
 
 const App = (): ReactElement => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 };
 
