@@ -1,4 +1,5 @@
-# TS React Project for Browsing games
+# React Project for Browsing games with Typescript
+
 
 ## Available Commands
 
